@@ -3,6 +3,7 @@
     padding: 0;
     font-family: monospace;
     font-size: 18px;
+    color: white;
 }
 
 body{
@@ -14,8 +15,27 @@ body{
 .text_box{
     border: 2px solid white;
     border-radius: 5px;
-    color: white;
     max-width: 700;
     padding: 15px;
     background-color: rgb(75, 66, 124);
+}
+
+main span{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+#time{
+    font-weight: 600;
+    font-size: 22px;
+}
+
+button{
+    background-color: rgb(255, 255, 255);
+    color: #444;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    
 }
