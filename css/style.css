@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    font-size: 18px;
+}
+
+body{
+    background-color: rgb(43, 37, 80);
+    padding: 4rem;	
+	margin: auto;
+}
+
+.text_box{
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    max-width: 700;
+    padding: 15px;
+    background-color: rgb(75, 66, 124);
+}
