@@ -20,7 +20,7 @@ body{
     background-color: rgb(75, 66, 124);
 }
 
-main span{
+main header{
     display: flex;
     justify-content: space-between;
     margin: 15px;
