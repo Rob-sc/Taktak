@@ -16,7 +16,11 @@ const $p = document.querySelector('p')
 function gnr_text(text){
     const words = text.split(" ")
     words.forEach(word => {
-        $p.innerHTML += "<word>" + word.split('') 
+        const letters = word.split('')
+        $p.innerHTML += "<word>" + 
+            letters.map( letter =>{
+               return "<letter>" + letter + "</letter>"
+            })
         + "</word>"
     });
 }
