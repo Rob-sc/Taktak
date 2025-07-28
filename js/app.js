@@ -1,26 +1,20 @@
-const $time = document.getElementById('time')
-const $score = document.getElementById('score')
+const $paragraph = document.querySelector('p');
+
+const TEXT_GAME = "Ejemplo de texto";
 
 
-let num = 0
-let score_points = 0
-let TEXT_GAME = "Lore ip sum"
-
-$time.innerHTML = num
-$score.innerHTML = score_points
-
-gnr_text(TEXT_GAME)
-
-const $p = document.querySelector('p')
 
 function gnr_text(text){
-    const words = text.split(" ")
-    words.forEach(word => {
-        const letters = word.split('')
-        $p.innerHTML += "<word>" + 
-            letters.map( letter =>{
-               return "<letter>" + letter + "</letter>"
-            })
-        + "</word>"
-    });
+    const words =  text.split(" ");
+    const letters = words.map((word)=>{
+        return "<words>" + word.split("").map((letter)=>{
+            return "<letters>" + letter + "</letters>"
+        }).join('')
+        + "</words>"
+    })
+    
+    $paragraph.innerHTML = letters.join(" ")
+
 }
+
+gnr_text(TEXT_GAME)
