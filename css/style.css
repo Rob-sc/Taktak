@@ -1,23 +1,29 @@
 *{
     margin: 0;
     padding: 0;
+
+}
+
+
+html,body{
     font-family: monospace;
     font-size: 18px;
     color: white;
-}
-
-body{
     background-color: rgb(43, 37, 80);
     padding: 4rem;	
 	margin: auto;
 }
 
 .text_box{
-    border: 2px solid white;
+
     border-radius: 5px;
     max-width: 700;
     padding: 15px;
     background-color: rgb(75, 66, 124);
+}
+
+p{
+    
 }
 
 main header{
@@ -38,4 +44,28 @@ button{
     border-radius: 5px;
     padding: 5px;
     margin: 40%;
+}
+
+letter{
+    color: #aaa;
+    position: relative;
+    font-size: 35px;
+
+    &.active::before {
+        content: '|';
+        color: aliceblue;
+        position: absolute;
+        left: -50%;
+        animation: 1s blink infinite ease-in-out;
+    }
+}
+
+@keyframes blink {
+    0%, 20%{
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0;
+    }
 }
