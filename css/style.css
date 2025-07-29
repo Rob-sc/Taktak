@@ -22,10 +22,6 @@ html,body{
     background-color: rgb(75, 66, 124);
 }
 
-p{
-    
-}
-
 main header{
     display: flex;
     justify-content: space-between;
