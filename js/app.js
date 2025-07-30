@@ -1,6 +1,7 @@
 const $score = document.getElementById('score')
 const $time = document.getElementById('time')
 const $paragraph = document.querySelector('p')
+const $input = document.querySelector('input')
 
 const TEXT_GAME = "Ejemplo de texto para la aplicación de escribir texto en pantalla."
 let INITIAL_TIME = 3
@@ -41,3 +42,8 @@ function gnr_timer(){
 const $focusWord = $paragraph.querySelector('word')
 $focusWord.classList.add('active')
 $focusWord.querySelector('letter').classList.add('active')
+
+
+$input.addEventListener('input', ()=>{
+    console.log(`Estas escribiendo esto ${$input.value}`);
+})
