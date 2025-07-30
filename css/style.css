@@ -5,27 +5,34 @@
 }
 
 
-html,body{
+html, body {
+    height: 100%;
     font-family: monospace;
     font-size: 18px;
     color: white;
     background-color: rgb(43, 37, 80);
-    padding: 4rem;	
-	margin: auto;
 }
 
 .text_box{
-
     border-radius: 5px;
     max-width: 700;
     padding: 15px;
     background-color: rgb(75, 66, 124);
 }
 
+main{
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrado perfecto */
+    height: 100px;
+    color: white;
+    border-radius: 10px;
+}
+
 main header{
     display: flex;
     justify-content: space-between;
-    margin: 15px;
 }
 
 #time{
@@ -33,14 +40,6 @@ main header{
     font-size: 22px;
 }
 
-button{
-    background-color: rgb(255, 255, 255);
-    color: #444;
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 40%;
-}
 
 letter{
     color: #aaa;

@@ -2,7 +2,7 @@ const $score = document.getElementById('score')
 const $time = document.getElementById('time')
 const $paragraph = document.querySelector('p')
 
-const TEXT_GAME = "De momento ejemplo de texto"
+const TEXT_GAME = "Ejemplo de texto para la aplicación de escribir texto en pantalla."
 let INITIAL_TIME = 3
 const INITIAL_SCORE = 0
 
