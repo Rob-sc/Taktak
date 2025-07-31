@@ -43,7 +43,16 @@ const $focusWord = $paragraph.querySelector('word')
 $focusWord.classList.add('active')
 $focusWord.querySelector('letter').classList.add('active')
 
+const Ejemplo = $focusWord.querySelector('letter').textContent
 
 $input.addEventListener('input', ()=>{
-    console.log(`Estas escribiendo esto ${$input.value}`);
-})
+    if ($input.value == Ejemplo){
+        console.log("EXITO")
+    }else{
+        console.log('Error')
+    }
+
+    })
+
+
+
