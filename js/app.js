@@ -3,7 +3,7 @@ const $time = document.getElementById('time')
 const $paragraph = document.querySelector('p')
 const $input = document.querySelector('input')
 
-const TEXT_GAME = "Ejemplo de texto para la aplicación de escribir texto en pantalla."
+const TEXT_GAME = "ejemplo de texto para la aplicación de escribir texto en pantalla."
 let INITIAL_TIME = 3
 const INITIAL_SCORE = 0
 
@@ -39,20 +39,39 @@ function gnr_timer(){
 
 }
 
+
 const $focusWord = $paragraph.querySelector('word')
 $focusWord.classList.add('active')
 $focusWord.querySelector('letter').classList.add('active')
 
-const Ejemplo = $focusWord.querySelector('letter').textContent
 
-$input.addEventListener('input', ()=>{
-    if ($input.value == Ejemplo){
+function initEvent(){
+    document.addEventListener('keydown', ()=>{
+        $input.focus()
+    })
+    $input.addEventListener('keydown', onKeydown)
+    $input.addEventListener('keyup', onKeyup)
+}
+
+function onKeydown(){
+    //console.log("Tecla presionada")
+}
+
+let index = 0
+
+function onKeyup(){
+    const allLetters = $focusWord.textContent.split("")
+    const activeletter = allLetters[index]
+    const comparar = $input.value.split("")[index]
+    if(activeletter == comparar){
         console.log("EXITO")
     }else{
-        console.log('Error')
+        console.log("ERROR")
     }
 
-    })
+    index++
+}
 
 
+initEvent()
 
