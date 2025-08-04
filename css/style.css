@@ -63,6 +63,16 @@ letter{
     }
 }
 
+letter.correct{
+    color: aliceblue;
+}
+
+letter.incorrect{
+    color: rgb(170, 55, 55);
+}
+
+
+
 @keyframes blink {
     0%, 20%{
         opacity: 1;

@@ -56,20 +56,28 @@ function initEvent(){
 function onKeydown(){
     //console.log("Tecla presionada")
 }
-
-let index = 0
+let n = 0
 
 function onKeyup(){
-    const allLetters = $focusWord.textContent.split("")
-    const activeletter = allLetters[index]
-    const comparar = $input.value.split("")[index]
+    const allLetters = $focusWord.querySelectorAll("letter")
+    const activeletter = allLetters[n].textContent
+    const comparar = $input.value.split("")[n]
     if(activeletter == comparar){
+        allLetters[n].classList.remove('active')
+        allLetters[n+1].classList.add('active')
+        console.log("La letra activa es:  " +activeletter + " y N  vale:" + n)
         console.log("EXITO")
+        allLetters[n].classList.add('correct')
+        
     }else{
-        console.log("ERROR")
+        console.error("ERROR")
+        allLetters[n].classList.remove('active')
+        allLetters[n+1].classList.add('active')
+        allLetters[n].classList.add('incorrect')
+
     }
 
-    index++
+    n += 1
 }
 
 
