@@ -20,6 +20,12 @@ html, body {
     background-color: rgb(75, 66, 124);
 }
 
+nav{
+    display: flex;
+    justify-content: space-between;
+
+}
+
 main{
     position: fixed;
     top: 30%;
