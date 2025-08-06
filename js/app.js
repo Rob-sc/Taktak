@@ -63,9 +63,7 @@ function onKeyup(){
     const $allLetters = $focusWord.querySelectorAll("letter")
 
     $input.value.split('').forEach((input_letter, index)=>{
-        if ($allLetters[index] == input_letter){
-            $allLetters[index].classList.add('correct')
-        }
+        console.log($allLetters[index].textContent)
     }
     )
 
@@ -74,5 +72,3 @@ function onKeyup(){
 
 
 initEvent()
-
-vnpxlrmdnisnct
