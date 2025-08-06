@@ -43,7 +43,7 @@ function gnr_timer(){
 const $focusWord = $paragraph.querySelector('word')
 $focusWord.classList.add('active')
 $focusWord.querySelector('letter').classList.add('active')
-let n = 0
+
 
 
 function initEvent(){
@@ -54,41 +54,20 @@ function initEvent(){
     $input.addEventListener('keyup', onKeyup)
 }
 
-function onKeydown(event){
-    console.log(event.key)
-    if(event.key === "Backspace"){
-        n -= 1
-    }
+function onKeydown(){
 
-    console.log("Ahora el valor de N es:  " + n)
 }
 
 
 function onKeyup(){
-    const allLetters = $focusWord.querySelectorAll("letter")
-    const activeletter = allLetters[n].textContent
-    const comparar = $input.value.split("")[n]
+    const $allLetters = $focusWord.querySelectorAll("letter")
 
-    try {
-        if(activeletter == comparar){
-        allLetters[n].classList.remove('active')
-        allLetters[n].classList.add('correct')
-        console.log("La letra activa es:  " +activeletter + " y N  vale: " + n)
-        console.log("EXITO")
-        
-        }else{
-            console.error("ERROR")
-            allLetters[n].classList.remove('active')
-            allLetters[n].classList.add('incorrect')
-
+    $input.value.split('').forEach((input_letter, index)=>{
+        if ($allLetters[index] == input_letter){
+            $allLetters[index].classList.add('correct')
         }
-
-        n += 1
-        allLetters[n].classList.add('active')
-
-    } catch (error) {
-        console.log("La cague")
     }
+    )
 
     
 }
@@ -96,3 +75,4 @@ function onKeyup(){
 
 initEvent()
 
+vnpxlrmdnisnct
