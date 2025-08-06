@@ -61,15 +61,21 @@ function onKeydown(){
 
 function onKeyup(){
     const $allLetters = $focusWord.querySelectorAll("letter")
+    $allLetters.forEach(letter=>letter.classList.remove("active","correct", "incorrect"))
 
     $input.value.split('').forEach((input_letter, index)=>{
         if($allLetters[index].textContent == input_letter){
-            console.log("try")
+            $allLetters[index].classList.add("correct")
+        }else{
+            $allLetters[index].classList.add("incorrect")
         }
-    }
-    )
+    })
 
-    
+    if($input.value.length < $allLetters.length){
+        $allLetters[$input.value.length].classList.add("active")
+    }else{
+        $allLetters[$input.value.length - 1].classList.add("active", "is-last")
+    }
 }
 
 

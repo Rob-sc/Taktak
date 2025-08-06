@@ -61,16 +61,18 @@ letter{
         left: -50%;
         animation: 1s blink infinite ease-in-out;
     }
-}
+    &.active.is-last::before {
+        left: 50%;
 
-letter.correct{
-    color: aliceblue;
+    }
+    &.correct{
+        color: aliceblue;
+    }
+    &.incorrect{
+        color: rgb(170, 55, 55);
+    }
+    
 }
-
-letter.incorrect{
-    color: rgb(170, 55, 55);
-}
-
 
 
 @keyframes blink {
