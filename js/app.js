@@ -63,7 +63,9 @@ function onKeyup(){
     const $allLetters = $focusWord.querySelectorAll("letter")
 
     $input.value.split('').forEach((input_letter, index)=>{
-        console.log($allLetters[index].textContent)
+        if($allLetters[index].textContent == input_letter){
+            console.log("try")
+        }
     }
     )
 
