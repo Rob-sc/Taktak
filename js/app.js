@@ -40,9 +40,9 @@ function gnr_timer(){
 }
 
 
-const $focusWord = $paragraph.querySelector('word')
-$focusWord.classList.add('active')
-$focusWord.querySelector('letter').classList.add('active')
+const $firstWord = $paragraph.querySelector('word')
+$firstWord.classList.add('active')
+$firstWord.querySelector('letter').classList.add('active')
 
 
 
@@ -60,8 +60,9 @@ function onKeydown(){
 
 
 function onKeyup(){
+    const $focusWord = $paragraph.querySelector("word.active")
     const $allLetters = $focusWord.querySelectorAll("letter")
-    $allLetters.forEach(letter=>letter.classList.remove("active","correct", "incorrect"))
+    $allLetters.forEach(letter=>letter.classList.remove("active","is-last","correct", "incorrect"))
 
     $input.value.split('').forEach((input_letter, index)=>{
         if($allLetters[index].textContent == input_letter){
