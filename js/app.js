@@ -22,9 +22,7 @@ function gnr_text(text){
         }).join('')
         + "</word>"
     })
-    
     $paragraph.innerHTML = letters.join(" ")
-
 }
 
 function gnr_timer(){
@@ -34,9 +32,7 @@ function gnr_timer(){
         INITIAL_TIME = 60
         //clearInterval(timer)
         //console.log("Has perdido")
-    }
-}, 1000);
-
+    }}, 1000);
 }
 
 
@@ -54,10 +50,23 @@ function initEvent(){
     $input.addEventListener('keyup', onKeyup)
 }
 
-function onKeydown(){
+function onKeydown(event){
+    const $focusWord = $paragraph.querySelector("word.active")
+    const $focusLetter = $focusWord.querySelector("letter.active")
 
+    const {key} = event
+    if (key === " "){
+        event.preventDefault()
+
+        $focusWord.classList.remove("active")
+        $focusLetter.classList.remove("active")
+
+        const $nextWord = $focusWord.nextElementSibling
+        $nextWord.classList.add("active")
+        
+        $input.value = ""
+    }
 }
-
 
 function onKeyup(){
     const $focusWord = $paragraph.querySelector("word.active")
