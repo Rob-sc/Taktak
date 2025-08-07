@@ -59,7 +59,8 @@ letter{
         color: aliceblue;
         position: absolute;
         left: -50%;
-        animation: 1s blink infinite ease-in-out;
+        /* transition: 102ms; Puede ser esto el fallo*/
+    /*  animation: 1s blink infinite ease-in-out; */
     }
     &.active.is-last::before {
         left: 50%;
@@ -75,7 +76,7 @@ letter{
 }
 
 
-@keyframes blink {
+/* @keyframes blink {
     0%, 20%{
         opacity: 1;
     }
@@ -83,4 +84,4 @@ letter{
     75% {
         opacity: 0;
     }
-}
+} */
