@@ -62,7 +62,7 @@ letter{
         color: aliceblue;
         position: absolute;
         left: -50%;
-        /* transition: 102ms; Puede ser esto el fallo*/
+        transition: 102ms;
     /*  animation: 1s blink infinite ease-in-out; */
     }
     &.active.is-last::before {
