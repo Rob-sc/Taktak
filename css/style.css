@@ -48,6 +48,9 @@ main header{
     font-size: 22px;
 }
 
+input{
+    opacity: 0;
+}
 
 letter{
     color: #aaa;
