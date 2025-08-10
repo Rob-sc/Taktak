@@ -36,6 +36,11 @@ function gnr_timer(){
 }
 
 
+function gnr_score(time,word){
+    const points = time * word
+    INITIAL_SCORE += points
+}
+
 const $firstWord = $paragraph.querySelector('word')
 $firstWord.classList.add('active')
 $firstWord.querySelector('letter').classList.add('active')
