@@ -26,7 +26,7 @@ function gnr_text(text){
 }
 
 function gnr_timer(){
-    const timer = setInterval(() => {
+    setInterval(() => {
     $time.textContent = INITIAL_TIME--
     if (INITIAL_TIME < 0){
         INITIAL_TIME = 60
